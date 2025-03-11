@@ -52,10 +52,10 @@ if all_df is not None:
     filtered_df = filtered_df[filtered_df['season_day'].isin(season_filter)]
     filtered_df = filtered_df[filtered_df['weathersit_day'].isin(weather_filter)]
 # Menampilkan Ringkasan Informasi
-    if show_summary:
-        st.subheader("📌 Ringkasan Informasi Dataset")
-        st.write(f"**Total Baris:** {all_df.shape[0]} | **Total Kolom:** {all_df.shape[1]}")
-        st.write(all_df.describe())
+if show_summary:
+    st.subheader("📌 Ringkasan Informasi Dataset")
+    st.write(f"**Total Baris:** {all_df.shape[0]} | **Total Kolom:** {all_df.shape[1]}")
+    st.write(all_df.describe())
         
 # Visualisasi Data setelah difilter
 if filtered_df is not None:
