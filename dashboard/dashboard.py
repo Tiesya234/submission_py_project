@@ -58,7 +58,7 @@ if show_summary:
     st.write(all_df.describe())
         
 # Visualisasi Data setelah difilter
-if filtered_df is not None:
+  if show_visualizations and not filtered_df.empty:
     st.subheader("Visualisasi Data Setelah Filter")
     
     # Tren jumlah sepeda yang dipinjam dalam sehari selama periode yang dipilih
@@ -122,6 +122,9 @@ if filtered_df is not None:
                 - 🌧️ Saat **hujan atau salju**, jumlah peminjaman sepeda menurun drastis.  
             """)
     st.pyplot(fig)
+elif not show_visualizations:
+    st.subheader("📊 Visualisasi Tidak Ditampilkan")
+    st.write("Silakan aktifkan opsi 'Tampilkan Visualisasi' di sidebar untuk melihat visualisasi data.")
     
 # Copyright
 st.markdown("---")
