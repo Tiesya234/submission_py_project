@@ -58,7 +58,7 @@ if show_summary:
     st.write(all_df.describe())
         
 # Visualisasi Data setelah difilter
-  if show_visualizations and all_df is not None:
+if show_visualizations and all_df is not None:
     st.subheader("Visualisasi Data Setelah Filter")
     
     # Tren jumlah sepeda yang dipinjam dalam sehari selama periode yang dipilih
